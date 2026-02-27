@@ -15,5 +15,6 @@ jobs:
         uses: backendcloud/hugging-push@v0.2.3
         with:
           hf_token: ${{ secrets.HF_TOKEN }}
+          repo_id: ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
           repo_type: space
           space_sdk: gradio
