@@ -1,21 +1,22 @@
-name: Deploy to Hugging Face Space
+name: Sync with Hugging Face Hub
 
 on:
   push:
-    branches: [main]
-
+    branches:
+      - main
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Push to Hugging Face
-        uses: backendcloud/hugging-push@v0.2.3
+      - name: Sync with Hugging Face
+        uses: nateraw/huggingface-sync-action@v0.0.5
         with:
-          hf_token: ${{ secrets.HF_TOKEN }}
-          huggingface_repo: ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
+          github_repo_id: ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
+          huggingface_repo_id: ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
           repo_type: space
           space_sdk: gradio
-          private: ${{ fromJSON('false') }}
+          hf_token: ${{ secrets.HF_TOKEN }}
+          private: false
