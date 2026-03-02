@@ -18,4 +18,4 @@ jobs:
           huggingface_repo: ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
           repo_type: space
           space_sdk: gradio
-          private: false
+          private: ${{ fromJSON('false') }}
