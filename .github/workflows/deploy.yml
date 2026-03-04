@@ -15,4 +15,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://ggSOS:$HF_TOKEN@huggingface.co/spaces/ggSOS/Sistema_Inteligente_de_Controle_de_Gastos main
+        run: git push https://ggSOS:$HF_TOKEN@huggingface.co/spaces/ggSOS/Sistema_Inteligente_de_Controle_de_Gastos main --force
