@@ -12,9 +12,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
 from threading import Thread
 
+
 # Loading the tokenizer and model from Hugging Face's model hub.
 tokenizer = AutoTokenizer.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
 model = AutoModelForCausalLM.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
+
 
 # using CUDA for an optimal experience
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
