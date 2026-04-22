@@ -210,4 +210,10 @@ __marimo__/
 
 # AI
 AI_models/
-chat_log.*
+chat_input/
+
+# Test
+test_environment_variables.py
+
+# FrontEnd
+.gradio/

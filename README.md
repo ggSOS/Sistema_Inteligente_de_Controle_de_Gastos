@@ -25,7 +25,7 @@ https://huggingface.co/spaces/ggSOS/Sistema_Inteligente_de_Controle_de_Gastos
 ## Test
 Definir Variável de Ambiente HF_TOKEN para acelerar download, assim como o exemplo:
 
-Pelo código(linha 67 de test_import_pre_trained_model.py):
+Pelo código(test_import_pre_trained_model.py):
   ```python
   os.environ["HF_TOKEN"] = "token_de_exemplo"
   ```

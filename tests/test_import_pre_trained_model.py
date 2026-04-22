@@ -1,12 +1,9 @@
-print("\n> Importando bibliotecas...")
 import os
 from pathlib import Path
 import gradio as gr
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers import StoppingCriteria, StoppingCriteriaList, TextIteratorStreamer
-from threading import Thread
-print("> Bibliotecas importadas com sucesso!")
+from pathlib import Path
 
 
 def change_environment_name(destiny_dir_string: str, os_enviroment_name: str):
@@ -63,7 +60,8 @@ def find_best_device():
 def import_model():
     models_dir_name = "AI_models"
     hf_enviroment_name = "HF_HOME"
-    model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+    models = ["TinyLlama/TinyLlama-1.1B-Chat-v1.0", "Qwen/Qwen2.5-3B"]
+    model_name = models[1]
     ## inserir token do HF
     model_personalized_dir_sucess = False
 
